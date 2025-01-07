@@ -1,7 +1,8 @@
 {
   "name": "portfolio-front",
-  "private": true,
   "version": "2.0.0",
+  "description": "Version 2 du frontend de mon portfolio",
+  "author": "Jonas Szigeti",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -57,13 +58,20 @@
     "vite": "^6.0.5",
     "vite-plugin-pwa": "^0.21.1"
   },
-  "description": "Version 2 de mon portfolio",
-  "author": "Jonas Szigeti",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jszigeti/portfolio-v2-frontend.git"
+  },
   "keywords": [
     "portfolio",
     "devweb",
+    "frontend",
     "react",
     "tailwind",
     "typescript"
-  ]
+  ],
+  "bugs": {
+    "url": "https://github.com/Jszigeti/portfolio-v2-frontend/issues"
+  },
+  "homepage": "https://github.com/Jszigeti/portfolio-v2-frontend#readme"
 }

@@ -116,10 +116,10 @@ This project includes a `Dockerfile` for containerized deployment. To build and 
 2. Run the Docker container:
 
    ```bash
-   docker run -d -p 3000:3000 portfolio-front:v2
+   docker run -d -p 80:80 portfolio-front:v2
    ```
 
-3. Access the application at `http://localhost:3000`.
+3. Access the application at `http://localhost:80`.
 
 ---
 
