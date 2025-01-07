@@ -1,0 +1,22 @@
+# Ignorer les fichiers et dossiers de dépendances
+node_modules
+yarn.lock
+
+# Ignorer les builds précédents
+dist
+
+# Ignorer les fichiers de configuration spécifiques au développement
+.env
+.env.local
+.env.development
+.env.development.local
+
+# Ignorer les fichiers système
+.DS_Store
+Thumbs.db
+
+# Ignorer les logs
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*

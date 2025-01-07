@@ -1,0 +1,43 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import FormikError from "./formikError";
+
+const Input = ({
+  formik,
+  inputName,
+  inputType = "text",
+  placeholder,
+  topPosition,
+}: {
+  formik: any;
+  inputName: string;
+  inputType?: string;
+  placeholder: string;
+  topPosition: string;
+}) => {
+  return (
+    <>
+      <input
+        type={inputType}
+        name={inputName}
+        value={formik.values[inputName]}
+        onChange={(e) => {
+          formik.setFieldTouched(inputName, true, false);
+          formik.handleChange(e);
+        }}
+        placeholder={placeholder}
+        className={`w-full bg-background text-muted-foreground border-b font-semibold focus:outline-none focus:border-b-2 pr-10 ${
+          formik.touched[inputName] && formik.errors[inputName]
+            ? "!border-red-500"
+            : null
+        }`}
+      />
+      <FormikError
+        formik={formik}
+        inputName={inputName}
+        topPosition={topPosition}
+      />
+    </>
+  );
+};
+
+export default Input;
