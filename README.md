@@ -110,7 +110,7 @@ This project includes a `Dockerfile` for containerized deployment. To build and 
 1. Build the Docker image:
 
    ```bash
-   docker build -t portfolio-front:v2 .
+   docker build -t portfolio-front:v2 --build-arg VITE_API_BASE_URL=<your_backend_api_url> .
    ```
 
 2. Run the Docker container:
