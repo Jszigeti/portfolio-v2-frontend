@@ -3,7 +3,7 @@ import { PropsWithChildren } from "react";
 const SectionLayout = ({
   children,
   sectionId,
-}: PropsWithChildren & { sectionId: string }) => {
+}: PropsWithChildren & { sectionId?: string }) => {
   return (
     <section
       className="min-h-dvh snap-start flex items-center justify-center"

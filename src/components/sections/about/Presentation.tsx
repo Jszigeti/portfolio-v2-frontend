@@ -46,7 +46,7 @@ export default function Presentation() {
         </div>
       </div>
       <NavLink
-        to="/assets/CV_Jonas_Szigeti.pdf"
+        to={`${import.meta.env.VITE_API_BASE_URL}/CV_Jonas_Szigeti.pdf`}
         target="_blank"
         className="md:mx-auto md:w-1/2"
       >

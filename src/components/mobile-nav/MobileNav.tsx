@@ -20,7 +20,7 @@ const MobileNav = () => {
         to="#home"
         className={`${
           activeSection === "home" ? "text-primary scale-110" : "text-muted"
-        } hover:text-primary transition-colors duration-300 hover:scale-110`}
+        } transition-colors duration-300 hover:scale-110`}
       >
         <IconHome size={35} />
         <span className="sr-only">Lien vers l'accueil</span>
@@ -30,7 +30,7 @@ const MobileNav = () => {
         to="#about"
         className={`${
           activeSection === "about" ? "text-primary scale-110" : "text-muted"
-        } hover:text-primary transition-colors duration-300 hover:scale-110`}
+        } transition-colors duration-300 hover:scale-110`}
       >
         <IconUserCircle size={35} />
         <span className="sr-only">Lien vers la section "A propos"</span>
@@ -40,7 +40,7 @@ const MobileNav = () => {
         to="#projects"
         className={`${
           activeSection === "projects" ? "text-primary scale-110" : "text-muted"
-        } hover:text-primary transition-colors duration-300 hover:scale-110`}
+        } transition-colors duration-300 hover:scale-110`}
       >
         <IconBriefcase2 size={35} />
         <span className="sr-only">Lien vers la section "Projets"</span>
@@ -50,7 +50,7 @@ const MobileNav = () => {
         to="#contact"
         className={`${
           activeSection === "contact" ? "text-primary scale-110" : "text-muted"
-        } hover:text-primary transition-colors duration-300 hover:scale-110`}
+        } transition-colors duration-300 hover:scale-110`}
       >
         <IconMail size={35} />
         <span className="sr-only">Lien vers la section "Contact"</span>
@@ -60,7 +60,7 @@ const MobileNav = () => {
         href="https://github.com/Jszigeti"
         target="_blank"
         rel="noopener noreferrer"
-        className="text-muted hover:text-primary transition-colors duration-300 hover:scale-110"
+        className="text-muted transition-colors duration-300 hover:scale-110"
       >
         <IconBrandGithub size={35} />
         <span className="sr-only">Lien Github</span>
@@ -69,7 +69,7 @@ const MobileNav = () => {
         href="https://linkedin.com/in/jonas-szigeti"
         target="_blank"
         rel="noopener noreferrer"
-        className="text-muted hover:text-primary transition-colors duration-300 hover:scale-110"
+        className="text-muted transition-colors duration-300 hover:scale-110"
       >
         <IconBrandLinkedin size={35} />
         <span className="sr-only">Lien LinkedIn</span>

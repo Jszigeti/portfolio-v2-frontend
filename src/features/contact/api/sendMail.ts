@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import { customHandleError } from "@/lib/utils";
 import { useApi } from "@/services/hooks/useApi";
+import { customHandleError } from "@/share/utils/customHandleError";
 
 export interface IMail {
   firstname: string;
@@ -11,9 +11,10 @@ export interface IMail {
 
 const sendMail = async (body: IMail) => {
   const api = useApi();
+
   try {
     await api.post(`/contact`, body);
-    return "Message envoyé avec succès";
+    return "Message envoyé avec succès !";
   } catch (error: unknown) {
     throw new Error(
       customHandleError(

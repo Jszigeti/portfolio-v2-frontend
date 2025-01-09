@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import Input from "@/components/ui/input";
 import TextArea from "@/components/ui/textArea";
-import { useContactForm } from "@/services/hooks/useContactForm";
+import { useContactForm } from "@/features/contact/hooks/useContactForm";
 
 export default function ContactForm() {
   const { formik } = useContactForm();
@@ -48,6 +48,7 @@ export default function ContactForm() {
         </div>
         <Button
           size="lg"
+          type="submit"
           className="md:mx-auto md:w-1/2 text-xl hover:scale-105 transition-transform duration-300"
         >
           Envoyer

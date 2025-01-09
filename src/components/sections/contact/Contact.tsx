@@ -1,5 +1,5 @@
 import SectionLayout from "../SectionLayout";
-import ContactForm from "./ContactForm";
+import ContactForm from "../../../features/contact/components/ContactForm";
 
 const Contact = () => {
   return (

@@ -2,6 +2,7 @@ import { useFormik } from "formik";
 import { toast } from "react-toastify";
 import { object, string } from "yup";
 import sendMail from "../api/sendMail";
+import { mailRegex } from "@/share/utils/regex";
 
 export const useContactForm = () => {
   const initialValues = {
@@ -12,10 +13,10 @@ export const useContactForm = () => {
   };
 
   const validationSchema = object({
-    firstname: string().required(),
-    lastname: string().required(),
-    email: string().email().required(),
-    message: string().required(),
+    firstname: string().required().min(2),
+    lastname: string().required().min(2),
+    email: string().email().required().matches(mailRegex),
+    message: string().required().min(10),
   });
 
   const formik = useFormik({
@@ -23,8 +24,8 @@ export const useContactForm = () => {
     validationSchema,
     onSubmit: async (values) => {
       try {
-        await sendMail(values);
-        toast.success("Message envoyé avec succès !");
+        const response = await sendMail(values);
+        toast.success(response);
         formik.resetForm();
       } catch (error: unknown) {
         if (error instanceof Error) {
