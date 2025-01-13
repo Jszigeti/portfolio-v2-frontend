@@ -2,7 +2,7 @@ import { Dispatch, SetStateAction } from "react";
 import { Button } from "@/components/ui/button";
 import Input from "@/components/ui/input";
 import { Label } from "@radix-ui/react-label";
-import { useSignupForm } from "../hooks/useSignupForm";
+import { useSignupForm } from "@/features/auth/hooks/useSignupForm";
 
 const SignupForm = ({
   setView,

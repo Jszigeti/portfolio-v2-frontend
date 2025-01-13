@@ -1,20 +1,17 @@
 import { Dispatch, SetStateAction } from "react";
 import { Button } from "@/components/ui/button";
 import Input from "@/components/ui/input";
-import { useSigninForm } from "../hooks/useSigninForm";
+import { useSigninForm } from "@/features/auth/hooks/useSigninForm";
 
 const SigninForm = ({
   setView,
 }: {
-  setView: Dispatch<SetStateAction<number>>;
+  setView?: Dispatch<SetStateAction<number>>;
 }) => {
   const { formik } = useSigninForm();
 
   return (
     <>
-      <h1 className="text-4xl md:text-5xl font-bold text-center mb-16">
-        Me connecter
-      </h1>
       <form
         onSubmit={formik.handleSubmit}
         className="mx-auto flex flex-col gap-8 w-full lg:w-4/5 justify-center items-center"
@@ -45,15 +42,17 @@ const SigninForm = ({
           Me connecter
         </Button>
       </form>
-      <p className="text-muted-foreground">
-        Pas encore inscrit ?{" "}
-        <span
-          className="text-foreground hover:text-primary transition-colors duration-300 cursor-pointer"
-          onClick={() => setView(1)}
-        >
-          M'inscrire
-        </span>
-      </p>
+      {setView && (
+        <p className="text-muted-foreground">
+          Pas encore inscrit ?{" "}
+          <span
+            className="text-foreground hover:text-primary transition-colors duration-300 cursor-pointer"
+            onClick={() => setView(1)}
+          >
+            M'inscrire
+          </span>
+        </p>
+      )}
     </>
   );
 };

@@ -8,9 +8,9 @@ const Intro = () => {
     <AuroraBackground>
       <SectionLayout sectionId="home">
         <p className="font-bold text-md md:text-lg -mb-6">Développeur web</p>
-        <h2 className="text-4xl md:text-5xl font-bold text-primary">
+        <h1 className="text-4xl md:text-5xl font-bold text-primary">
           Jonas Szigeti
-        </h2>
+        </h1>
         <h2 className="text-4xl md:text-5xl font-bold">
           Je conçois des applications web modernes.
         </h2>

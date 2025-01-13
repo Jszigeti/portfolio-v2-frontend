@@ -1,7 +1,7 @@
 import { useFormik } from "formik";
 import { toast } from "react-toastify";
 import { object, string } from "yup";
-import sendMail from "../api/sendMail";
+import sendMail from "@/features/contact/api/sendMail";
 import { mailRegex } from "@/share/utils/regex";
 
 export const useContactForm = () => {

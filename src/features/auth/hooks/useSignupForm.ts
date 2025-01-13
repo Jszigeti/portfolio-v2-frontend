@@ -3,7 +3,7 @@ import { useFormik } from "formik";
 import { toast } from "react-toastify";
 import { object, ref, string } from "yup";
 import { mailRegex, passwordRegex } from "@/share/utils/regex";
-import signup from "../api/signup";
+import signup from "@/features/auth/api/signup";
 
 export const useSignupForm = () => {
   const initialValues = {

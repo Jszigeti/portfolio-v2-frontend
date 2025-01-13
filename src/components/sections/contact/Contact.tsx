@@ -4,6 +4,9 @@ import ContactForm from "../../../features/contact/components/ContactForm";
 const Contact = () => {
   return (
     <SectionLayout sectionId="contact">
+      <h2 className="text-3xl md:text-4xl font-bold text-left mb-16">
+        Me <span className="text-primary">contacter</span>
+      </h2>
       <ContactForm />
     </SectionLayout>
   );

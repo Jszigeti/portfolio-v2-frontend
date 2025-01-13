@@ -25,7 +25,7 @@ const Input = ({
           formik.handleChange(e);
         }}
         placeholder={placeholder}
-        className={`w-full bg-background text-muted-foreground border-b font-semibold focus:outline-none focus:border-b-2 pr-10 ${
+        className={`w-full bg-background text-foreground border-b border-muted-foreground font-semibold focus:outline-none focus:border-b-2 pr-10 ${
           formik.touched[inputName] && formik.errors[inputName]
             ? "!border-red-500"
             : null

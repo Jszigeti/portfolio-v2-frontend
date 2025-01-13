@@ -1,9 +1,9 @@
 import { useFormik } from "formik";
 import { toast } from "react-toastify";
 import { object, string } from "yup";
-import signin from "../api/signin";
+import signin from "@/features/auth/api/signin";
 import { mailRegex, passwordRegex } from "@/share/utils/regex";
-import useAuthStore from "../store/AuthStore";
+import useAuthStore from "@/services/store/AuthStore";
 
 export const useSigninForm = () => {
   const { setIsAuthenticated } = useAuthStore();

@@ -1,13 +1,9 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import { useApi } from "@/services/hooks/useApi";
+import { IAuth } from "@/features/auth/types/auth";
 import { customHandleError } from "@/share/utils/customHandleError";
 
-export interface ISignup {
-  email: string;
-  password: string;
-}
-
-const signup = async (body: ISignup) => {
+const signup = async (body: IAuth) => {
   const api = useApi();
 
   try {

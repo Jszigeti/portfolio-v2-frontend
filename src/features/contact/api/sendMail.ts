@@ -1,13 +1,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import { useApi } from "@/services/hooks/useApi";
 import { customHandleError } from "@/share/utils/customHandleError";
-
-export interface IMail {
-  firstname: string;
-  lastname: string;
-  email: string;
-  message: string;
-}
+import { IMail } from "@/features/contact/types/mail";
 
 const sendMail = async (body: IMail) => {
   const api = useApi();
