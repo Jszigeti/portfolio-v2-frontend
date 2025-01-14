@@ -26,6 +26,7 @@ const SignupForm = ({
             formik={formik}
             inputName="email"
             inputType="email"
+            label="Email"
             placeholder="jean.dupont@gmail.com"
             topPosition="top-1/2"
           />
@@ -36,6 +37,7 @@ const SignupForm = ({
             formik={formik}
             inputName="password"
             inputType="password"
+            label="Mot de passe"
             placeholder="**********"
             topPosition="top-1/2"
           />
@@ -46,6 +48,7 @@ const SignupForm = ({
             formik={formik}
             inputName="matchingPassword"
             inputType="password"
+            label="Confirmation mot de passe"
             placeholder="**********"
             topPosition="top-1/2"
           />

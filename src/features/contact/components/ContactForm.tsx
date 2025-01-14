@@ -16,6 +16,7 @@ export default function ContactForm() {
             <Input
               formik={formik}
               inputName="firstname"
+              label="Votre prénom"
               placeholder="Votre prénom"
               topPosition="top-1/2"
             />
@@ -24,6 +25,7 @@ export default function ContactForm() {
             <Input
               formik={formik}
               inputName="lastname"
+              label="Votre nom"
               placeholder="Votre nom"
               topPosition="top-1/2"
             />
@@ -34,6 +36,7 @@ export default function ContactForm() {
             formik={formik}
             inputName="email"
             inputType="email"
+            label="Votre email"
             placeholder="Votre email"
             topPosition="top-1/2"
           />
@@ -42,6 +45,7 @@ export default function ContactForm() {
           <TextArea
             formik={formik}
             inputName="message"
+            label="Votre message"
             placeholder="Votre message"
             topPosition="top-4"
           />

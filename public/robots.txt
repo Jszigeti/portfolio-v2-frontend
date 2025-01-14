@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /CV_Jonas_Szigeti.pdf
+Sitemap: https://jsproject.fr/sitemap.xml

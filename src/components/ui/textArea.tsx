@@ -4,17 +4,23 @@ import FormikError from "./formikError";
 const TextArea = ({
   formik,
   inputName,
+  label,
   placeholder,
   topPosition,
 }: {
   formik: any;
   inputName: string;
+  label: string;
   placeholder: string;
   topPosition: string;
 }) => {
   return (
     <>
+      <label htmlFor={inputName} className="sr-only">
+        {label}
+      </label>
       <textarea
+        id={inputName}
         name={inputName}
         value={formik.values[inputName]}
         onChange={(e) => {

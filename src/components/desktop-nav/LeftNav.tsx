@@ -8,7 +8,7 @@ const LeftNav = () => {
         to="https://github.com/Jszigeti"
         target="_blank"
         rel="noopener noreferrer"
-        className="text-muted hover:text-primary transition-colors duration-300 hover:scale-110"
+        className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:scale-110"
       >
         <IconBrandGithub size={35} />
         <span className="sr-only">Lien Github</span>
@@ -17,12 +17,12 @@ const LeftNav = () => {
         to="https://linkedin.com/in/jonas-szigeti"
         target="_blank"
         rel="noopener noreferrer"
-        className="text-muted hover:text-primary transition-colors duration-300 hover:scale-110"
+        className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:scale-110"
       >
         <IconBrandLinkedin size={35} />
         <span className="sr-only">Lien LinkedIn</span>
       </NavLink>
-      <div className="w-px h-64 bg-muted"></div>
+      <div className="w-px h-64 bg-muted-foreground"></div>
     </div>
   );
 };

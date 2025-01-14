@@ -5,18 +5,24 @@ const Input = ({
   formik,
   inputName,
   inputType = "text",
+  label,
   placeholder,
   topPosition,
 }: {
   formik: any;
   inputName: string;
   inputType?: string;
+  label: string;
   placeholder: string;
   topPosition: string;
 }) => {
   return (
     <>
+      <label htmlFor={inputName} className="sr-only">
+        {label}
+      </label>
       <input
+        id={inputName}
         type={inputType}
         name={inputName}
         value={formik.values[inputName]}

@@ -18,7 +18,9 @@ const RightNav = () => {
         to="#home"
         rel="noopener noreferrer"
         className={`${
-          activeSection === "home" ? "text-primary scale-110" : "text-muted"
+          activeSection === "home"
+            ? "text-primary scale-110"
+            : "text-muted-foreground"
         } hover:text-primary transition-colors duration-300 hover:scale-110`}
       >
         <IconHome size={35} />
@@ -29,7 +31,9 @@ const RightNav = () => {
         to="#about"
         rel="noopener noreferrer"
         className={`${
-          activeSection === "about" ? "text-primary scale-110" : "text-muted"
+          activeSection === "about"
+            ? "text-primary scale-110"
+            : "text-muted-foreground"
         } hover:text-primary transition-colors duration-300 hover:scale-110`}
       >
         <IconUserCircle size={35} />
@@ -40,7 +44,9 @@ const RightNav = () => {
         to="#projects"
         rel="noopener noreferrer"
         className={`${
-          activeSection === "projects" ? "text-primary scale-110" : "text-muted"
+          activeSection === "projects"
+            ? "text-primary scale-110"
+            : "text-muted-foreground"
         } hover:text-primary transition-colors duration-300 hover:scale-110`}
       >
         <IconBriefcase2 size={35} />
@@ -51,13 +57,15 @@ const RightNav = () => {
         to="#contact"
         rel="noopener noreferrer"
         className={`${
-          activeSection === "contact" ? "text-primary scale-110" : "text-muted"
+          activeSection === "contact"
+            ? "text-primary scale-110"
+            : "text-muted-foreground"
         } hover:text-primary transition-colors duration-300 hover:scale-110`}
       >
         <IconMail size={35} />
         <span className="sr-only">Lien vers la section "Contact"</span>
       </NavHashLink>
-      <div className="w-px h-64 bg-muted"></div>
+      <div className="w-px h-64 bg-muted-foreground"></div>
     </div>
   );
 };

@@ -8,7 +8,7 @@ export default function Presentation() {
       <div className="flex flex-col gap-4 lg:flex-row lg:justify-around md:items-center">
         <Portrait />
         <div className="flex flex-col lg:w-1/2 justify-between md:gap-4 lg:gap-8">
-          <p className="text-sm md:text-md lg:text-lg text-justify">
+          <p className="text-sm md:text-md lg:text-lg">
             <span className="text-primary font-semibold">Salut ! 👋</span>
             <br />
             <br />
@@ -24,7 +24,7 @@ export default function Presentation() {
             </span>
             .
           </p>
-          <p className="text-sm md:text-md lg:text-lg text-justify">
+          <p className="text-sm md:text-md lg:text-lg">
             J'aime aussi développer des{" "}
             <span className="text-primary font-semibold">
               outils open-source
@@ -33,7 +33,7 @@ export default function Presentation() {
             <span className="text-primary font-semibold">packages npm</span>{" "}
             pour faciliter la vie des développeurs.
           </p>
-          <p className="text-sm md:text-md lg:text-lg text-justify">
+          <p className="text-sm md:text-md lg:text-lg">
             Quand je ne suis pas en train de coder, je me passionne pour le{" "}
             <span className="text-primary font-semibold">rétrogaming</span>, les{" "}
             <span className="text-primary font-semibold">jeux de gestion</span>{" "}
@@ -45,11 +45,7 @@ export default function Presentation() {
           </p>
         </div>
       </div>
-      <NavLink
-        to={`${import.meta.env.VITE_API_BASE_URL}CV_Jonas_Szigeti.pdf`}
-        target="_blank"
-        className="md:mx-auto md:w-1/2"
-      >
+      <NavLink to={`/cv`} target="_blank" className="md:mx-auto md:w-1/2">
         <Button
           size="lg"
           className="text-xl hover:scale-105 transition-transform duration-300 w-full z-50"
