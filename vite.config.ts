@@ -40,15 +40,6 @@ export default defineConfig({
       },
     }),
   ],
-  server: {
-    proxy: {
-      "/cv": {
-        target: "https://api.jsproject.fr",
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/cv/, "/CV_Jonas_Szigeti.pdf"),
-      },
-    },
-  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

@@ -45,7 +45,11 @@ export default function Presentation() {
           </p>
         </div>
       </div>
-      <NavLink to={`/cv`} target="_blank" className="md:mx-auto md:w-1/2">
+      <NavLink
+        to={`${import.meta.env.VITE_API_BASE_URL}CV_Jonas_Szigeti.pdf`}
+        target="_blank"
+        className="md:mx-auto md:w-1/2"
+      >
         <Button
           size="lg"
           className="text-xl hover:scale-105 transition-transform duration-300 w-full z-50"

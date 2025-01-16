@@ -220,19 +220,44 @@ export const CloseIcon = () => {
 
 const cards = [
   {
-    description: "Exemple de clean architecture",
-    title: "React Clean Architecture",
-    src: "/assets/react-icon.webp",
+    description: "Microservice NestJS",
+    title: "ms-mail",
+    src: "/assets/nestjs-logo.webp",
     ctaText: "Voir",
-    ctaLink: "https://github.com/Jszigeti/react-clean-architecture-example",
+    ctaLink: "https://github.com/Jszigeti/ms-mail",
     content: `
-      Ce projet met en avant l'application des principes de clean architecture dans une application React. 
-      Découvrez une structure moderne et bien pensée pour vos projets React. Voici ce qu'il propose :
-      - Séparation claire entre les couches : composants, services et cas d'utilisation.
-      - Exemples pratiques pour organiser vos fichiers et modules.
-      - Une meilleure maintenabilité et évolutivité grâce à une architecture bien définie.
-      - Adapté pour les projets nécessitant une scalabilité et un code testable.
-      Ce dépôt est une référence pour apprendre et appliquer une architecture propre dans React.`,
+      ms-mail est un microservice conçu pour simplifier et automatiser l'envoi d'emails dans vos applications. 
+      Ses principales fonctionnalités incluent :
+      - L'envoi d'emails personnalisés grâce à des templates dynamiques et adaptables.
+      - Le suivi des statuts d'envoi (PENDING, SENT, FAILED) pour un monitoring précis.
+      - Une intégration fluide avec des systèmes distribués via NATS.
+      - Une compatibilité maximale avec les fournisseurs SMTP grâce à Nodemailer.
+      - Un système extensible avec des fonctionnalités à venir comme l'envoi d'emails multiples.
+      ms-mail est un outil réutilisable et flexible, parfait pour répondre à vos besoins d'envoi d'emails.`,
+  },
+  {
+    description: "Bot interactif",
+    title: "Chatbot Widget",
+    src: "/assets/chatbot.webp",
+    ctaText: "Voir",
+    ctaLink: "https://github.com/Jszig/personal-chatbot-widget",
+    content: `
+      Le Personal Chatbot Widget est un outil interactif conçu pour enrichir les portfolios de développeurs. 
+      Il simule une conversation en première personne avec le développeur, offrant des informations sur ses compétences, projets, et expériences, tout en redirigeant les utilisateurs vers un formulaire de contact pour des demandes spécifiques.
+  
+      Fonctionnalités principales :
+      - Widget extensible : Une interface qui s'ouvre depuis un onglet en bas de la page.
+      - Contenu personnalisé : Le bot répond comme s’il était le développeur.
+      - Intégration OpenAI : Alimenté par GPT-3.5-Turbo pour des réponses intelligentes et contextuelles.
+      - Configuration modulaire : Les paramètres et contenus du bot sont centralisés pour une personnalisation facile.
+      - Limites de session : Contrôle le nombre de messages par session et notifie les utilisateurs.
+      - Gestion des erreurs : Messages conviviaux en cas de problème.
+  
+      Technologies utilisées :
+      - React, TypeScript, Vite, Tailwind CSS et Shadcn pour une interface moderne et accessible.
+      - OpenAI API pour des interactions riches et dynamiques.
+  
+      Ce widget est parfait pour créer un portfolio interactif et marquer les esprits des visiteurs.`,
   },
   {
     description: "Package NPM",
