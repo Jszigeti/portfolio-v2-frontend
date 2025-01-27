@@ -7,7 +7,12 @@ export default function Logo() {
   return (
     <NavHashLink
       smooth
-      to={location.pathname.startsWith("/admin") ? "/" : "#home"}
+      to={
+        location.pathname.startsWith("/admin") ||
+        location.pathname.startsWith("/mentions-legales")
+          ? "/"
+          : "#home"
+      }
       rel="noopener noreferrer"
       className="text-muted hover:text-primary transition-colors duration-300 hover:scale-110"
     >

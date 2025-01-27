@@ -3,8 +3,7 @@
 import { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "@/services/hooks/useOutsideClick";
-import { Button } from "@/components/ui/button";
-import { NavLink } from "react-router-dom";
+import CtaButton from "@/components/ui/cta-button";
 
 export function ExpandableCardDemo() {
   const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(
@@ -168,19 +167,11 @@ export function ExpandableCardDemo() {
           </motion.div>
         ))}
       </ul>
-
-      <NavLink
-        to="https://github.com/Jszigeti?tab=repositories"
-        target="_blank"
-        className="md:mx-auto md:w-1/2"
-      >
-        <Button
-          size="lg"
-          className="text-xl hover:scale-105 transition-transform duration-300 w-full z-50"
-        >
-          Voir plus
-        </Button>
-      </NavLink>
+      <CtaButton
+        linkTo="https://github.com/Jszigeti?tab=repositories"
+        content="Voir plus"
+        newTab
+      />
     </>
   );
 }
@@ -220,21 +211,22 @@ export const CloseIcon = () => {
 
 const cards = [
   {
-    description: "Microservice NestJS",
-    title: "ms-mail",
-    src: "/assets/nestjs-logo.webp",
+    description: "App de voyages collaboratifs",
+    title: "Travel2Gether",
+    src: "/assets/travel2gether-logo.webp",
     ctaText: "Voir",
-    ctaLink: "https://github.com/Jszigeti/ms-mail",
+    ctaLink: "https://git.alt-tools.tech/gp_groovy_git/travel2gather",
     content: `
-      ms-mail est un microservice conçu pour simplifier et automatiser l'envoi d'emails dans vos applications. 
-      Ses principales fonctionnalités incluent :
-      - L'envoi d'emails personnalisés grâce à des templates dynamiques et adaptables.
-      - Le suivi des statuts d'envoi (PENDING, SENT, FAILED) pour un monitoring précis.
-      - Une intégration fluide avec des systèmes distribués via NATS.
-      - Une compatibilité maximale avec les fournisseurs SMTP grâce à Nodemailer.
-      - Un système extensible avec des fonctionnalités à venir comme l'envoi d'emails multiples.
-      ms-mail est un outil réutilisable et flexible, parfait pour répondre à vos besoins d'envoi d'emails.`,
+      Travel2Gether est une plateforme innovante dédiée aux voyageurs solitaires ou en groupe cherchant à collaborer. 
+      Ses fonctionnalités incluent :
+      - Création et gestion de groupes pour planifier des voyages en commun.
+      - Partage d'itinéraires et collaboration en temps réel.
+      - Système de messagerie intégré pour une communication simplifiée.
+      - Notifications in-app et par email pour rester informé des changements.
+      - Gestion des médias pour partager des photos et des documents liés au voyage.
+      Travel2Gether est une solution complète pour rendre vos voyages plus organisés et collaboratifs.`,
   },
+
   {
     description: "Bot interactif",
     title: "Chatbot Widget",
@@ -260,6 +252,22 @@ const cards = [
       Ce widget est parfait pour créer un portfolio interactif et marquer les esprits des visiteurs.`,
   },
   {
+    description: "Microservice NestJS",
+    title: "ms-mail",
+    src: "/assets/nestjs-logo.webp",
+    ctaText: "Voir",
+    ctaLink: "https://github.com/Jszigeti/ms-mail",
+    content: `
+      ms-mail est un microservice conçu pour simplifier et automatiser l'envoi d'emails dans vos applications. 
+      Ses principales fonctionnalités incluent :
+      - L'envoi d'emails personnalisés grâce à des templates dynamiques et adaptables.
+      - Le suivi des statuts d'envoi (PENDING, SENT, FAILED) pour un monitoring précis.
+      - Une intégration fluide avec des systèmes distribués via NATS.
+      - Une compatibilité maximale avec les fournisseurs SMTP grâce à Nodemailer.
+      - Un système extensible avec des fonctionnalités à venir comme l'envoi d'emails multiples.
+      ms-mail est un outil réutilisable et flexible, parfait pour répondre à vos besoins d'envoi d'emails.`,
+  },
+  {
     description: "Package NPM",
     title: "Axios Cookie Auth",
     src: "/assets/npm-icon.webp",
@@ -274,35 +282,19 @@ const cards = [
       - Des exemples clairs pour faciliter son utilisation.
       Idéal pour les développeurs qui souhaitent ajouter une solution d'authentification robuste à leur application sans effort supplémentaire.`,
   },
-  {
-    description: "Package NPM",
-    title: "Axios Error Handler",
-    src: "/assets/npm-icon.webp",
-    ctaText: "Voir",
-    ctaLink: "https://github.com/Jszigeti/axios-error-handler",
-    content: `
-      Axios Error Handler est un outil pratique pour centraliser la gestion des erreurs lors des appels API. 
-      Voici ce qu'il offre :
-      - Gestion simplifiée des erreurs via des hooks ou des services globaux.
-      - Une personnalisation facile pour répondre aux besoins spécifiques de votre application.
-      - Réduction de la duplication du code lié aux erreurs.
-      - Compatibilité avec tous les projets utilisant Axios.
-      Avec ce package, vous gagnerez en clarté et en efficacité dans vos projets front-end.`,
-  },
-  {
-    description: "App de voyages collaboratifs",
-    title: "Travel2Gether",
-    src: "/assets/travel2gether-logo.webp",
-    ctaText: "Voir",
-    ctaLink: "https://git.alt-tools.tech/gp_groovy_git/travel2gather",
-    content: `
-      Travel2Gether est une plateforme innovante dédiée aux voyageurs solitaires ou en groupe cherchant à collaborer. 
-      Ses fonctionnalités incluent :
-      - Création et gestion de groupes pour planifier des voyages en commun.
-      - Partage d'itinéraires et collaboration en temps réel.
-      - Système de messagerie intégré pour une communication simplifiée.
-      - Notifications in-app et par email pour rester informé des changements.
-      - Gestion des médias pour partager des photos et des documents liés au voyage.
-      Travel2Gether est une solution complète pour rendre vos voyages plus organisés et collaboratifs.`,
-  },
+  // {
+  //   description: "Package NPM",
+  //   title: "Axios Error Handler",
+  //   src: "/assets/npm-icon.webp",
+  //   ctaText: "Voir",
+  //   ctaLink: "https://github.com/Jszigeti/axios-error-handler",
+  //   content: `
+  //     Axios Error Handler est un outil pratique pour centraliser la gestion des erreurs lors des appels API.
+  //     Voici ce qu'il offre :
+  //     - Gestion simplifiée des erreurs via des hooks ou des services globaux.
+  //     - Une personnalisation facile pour répondre aux besoins spécifiques de votre application.
+  //     - Réduction de la duplication du code lié aux erreurs.
+  //     - Compatibilité avec tous les projets utilisant Axios.
+  //     Avec ce package, vous gagnerez en clarté et en efficacité dans vos projets front-end.`,
+  // },
 ];

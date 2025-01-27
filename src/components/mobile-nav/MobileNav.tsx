@@ -6,15 +6,16 @@ import {
   IconMail,
   IconBrandGithub,
   IconBrandLinkedin,
+  IconPackage,
 } from "@tabler/icons-react";
 import { NavHashLink } from "react-router-hash-link";
 
 const MobileNav = () => {
-  const sections = ["home", "about", "projects", "contact"];
+  const sections = ["home", "services", "projects", "about", "contact"];
   const activeSection = useSectionObserver(sections);
 
   return (
-    <div className="fixed bottom-3 left-1/2 z-[100] transform -translate-x-1/2 flex items-center space-x-4 bg-background p-4 rounded-full shadow-lg lg:hidden">
+    <div className="xs:opacity-75 fixed bottom-3 left-1/2 z-[100] transform -translate-x-1/2 flex items-center xs:space-x-2 space-x-4 bg-background p-4 rounded-full shadow-lg lg:hidden">
       <NavHashLink
         smooth
         to="#home"
@@ -29,6 +30,32 @@ const MobileNav = () => {
       </NavHashLink>
       <NavHashLink
         smooth
+        to="#services"
+        rel="noopener noreferrer"
+        className={`${
+          activeSection === "services"
+            ? "text-primary scale-110"
+            : "text-muted-foreground"
+        } transition-colors duration-300 hover:scale-110`}
+      >
+        <IconBriefcase2 size={35} />
+        <span className="sr-only">Lien vers la section "Services"</span>
+      </NavHashLink>
+      <NavHashLink
+        smooth
+        to="#projects"
+        rel="noopener noreferrer"
+        className={`${
+          activeSection === "projects"
+            ? "text-primary scale-110"
+            : "text-muted-foreground"
+        } transition-colors duration-300 hover:scale-110`}
+      >
+        <IconPackage size={35} />
+        <span className="sr-only">Lien vers la section "Projets"</span>
+      </NavHashLink>
+      <NavHashLink
+        smooth
         to="#about"
         className={`${
           activeSection === "about"
@@ -38,18 +65,6 @@ const MobileNav = () => {
       >
         <IconUserCircle size={35} />
         <span className="sr-only">Lien vers la section "A propos"</span>
-      </NavHashLink>
-      <NavHashLink
-        smooth
-        to="#projects"
-        className={`${
-          activeSection === "projects"
-            ? "text-primary scale-110"
-            : "text-muted-foreground"
-        } transition-colors duration-300 hover:scale-110`}
-      >
-        <IconBriefcase2 size={35} />
-        <span className="sr-only">Lien vers la section "Projets"</span>
       </NavHashLink>
       <NavHashLink
         smooth

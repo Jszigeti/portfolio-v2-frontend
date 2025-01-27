@@ -6,10 +6,10 @@ const SectionLayout = ({
 }: PropsWithChildren & { sectionId?: string }) => {
   return (
     <section
-      className="min-h-dvh snap-start flex items-center justify-center"
+      className="min-h-[100dvh] snap-start flex items-center justify-center container mx-auto"
       id={sectionId}
     >
-      <div className="w-full flex flex-col lg:w-2/3 gap-6 sm:gap-8 px-4">
+      <div className="w-full h-full flex flex-col lg:w-2/3 gap-5 sm:gap-8 xs:px-2 px-4">
         {children}
       </div>
     </section>

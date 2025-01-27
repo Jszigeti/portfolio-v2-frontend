@@ -1,5 +1,5 @@
 import Header from "@/components/header/Header";
-import SectionLayout from "@/components/sections/SectionLayout";
+import SectionLayout from "@/components/ui/section-layout";
 import LogoutButton from "@/features/auth/components/LogoutButton";
 import SigninForm from "@/features/auth/components/SigninForm";
 // import SignupForm from "@/features/auth/components/SignupForm";

@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Input from "@/components/ui/input";
-import TextArea from "@/components/ui/textArea";
+import TextArea from "@/components/ui/text-area";
 import { useContactForm } from "@/features/contact/hooks/useContactForm";
 
 export default function ContactForm() {
@@ -9,7 +9,7 @@ export default function ContactForm() {
     <>
       <form
         onSubmit={formik.handleSubmit}
-        className="mx-auto flex flex-col gap-8 w-full lg:w-4/5 justify-center"
+        className="mx-auto flex flex-col xs:gap-3 gap-6 w-full lg:w-4/5"
       >
         <div className="flex gap-4 items-center w-full">
           <div className="relative w-1/2">
@@ -53,7 +53,7 @@ export default function ContactForm() {
         <Button
           size="lg"
           type="submit"
-          className="md:mx-auto md:w-1/2 text-xl hover:scale-105 transition-transform duration-300"
+          className="lg:mx-auto lg:w-1/2 text-xl hover:scale-105 transition-transform duration-300"
         >
           Envoyer
         </Button>

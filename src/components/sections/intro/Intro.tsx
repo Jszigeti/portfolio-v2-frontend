@@ -1,44 +1,39 @@
-import { Button } from "../../ui/button";
-import SectionLayout from "../SectionLayout";
+import SectionTitle from "@/components/ui/section-title";
+import SectionLayout from "../../ui/section-layout";
 import { AuroraBackground } from "@/components/ui/aurora-background";
-import { NavHashLink } from "react-router-hash-link";
+import CtaButton from "@/components/ui/cta-button";
 
 const Intro = () => {
   return (
     <AuroraBackground>
       <SectionLayout sectionId="home">
-        <h2 className="font-bold text-md md:text-lg -mb-6">Développeur web</h2>
-        <h1 className="text-4xl md:text-5xl font-bold text-primary">
-          Jonas Szigeti
-        </h1>
-        <h2 className="text-4xl md:text-5xl font-bold">
-          Je conçois des applications web modernes.
-        </h2>
-        <p className="text-lg">
-          Je suis un{" "}
-          <span className="text-primary font-semibold">développeur web</span>{" "}
-          spécialisé dans la création (et parfois la conception) d'
+        <SectionTitle
+          title="Jonas Szigeti"
+          subtitle="Développeur Web"
+          secondSubtitle="Transformez vos idées en outils numériques performants"
+          main
+        />
+        <p className="xs:text-base text-lg mt-2 md:mt-4">
+          En tant que{" "}
           <span className="text-primary font-semibold">
-            expériences numériques
-          </span>{" "}
-          soignées. Actuellement, je me concentre sur le développement de{" "}
-          <span className="text-primary font-semibold">
-            produits accessibles
-          </span>{" "}
-          et{" "}
-          <span className="text-primary font-semibold">
-            centrés sur l'utilisateur
+            développeur web freelance
           </span>
-          .
+          , je conçois des{" "}
+          <span className="text-primary font-semibold">sites web</span> et{" "}
+          <span className="text-primary font-semibold">
+            applications modernes
+          </span>{" "}
+          adaptés à vos besoins. Mon objectif : vous fournir des solutions{" "}
+          <span className="text-primary font-semibold">simples</span>,{" "}
+          <span className="text-primary font-semibold">efficaces</span>, et{" "}
+          <span className="text-primary font-semibold">accessibles</span>.
         </p>
-        <NavHashLink smooth to="#contact" className="md:mx-auto md:w-1/2">
-          <Button
-            size="lg"
-            className="text-xl hover:scale-105 transition-transform duration-300 w-full z-50"
-          >
-            Me contacter
-          </Button>
-        </NavHashLink>
+        <p className="xs:text-base text-lg mt-1 md:mt-2">
+          Que ce soit pour améliorer votre visibilité, automatiser vos tâches ou
+          offrir une expérience unique à vos utilisateurs, je suis là pour vous
+          accompagner à chaque étape de votre projet numérique.
+        </p>
+        <CtaButton linkTo="#services" content="Découvrez mes services" />
       </SectionLayout>
     </AuroraBackground>
   );

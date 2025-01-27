@@ -4,11 +4,12 @@ import {
   IconUserCircle,
   IconBriefcase2,
   IconMail,
+  IconPackage,
 } from "@tabler/icons-react";
 import { NavHashLink } from "react-router-hash-link";
 
 const RightNav = () => {
-  const sections = ["home", "about", "projects", "contact"];
+  const sections = ["home", "services", "projects", "about", "contact"];
   const activeSection = useSectionObserver(sections);
 
   return (
@@ -28,16 +29,16 @@ const RightNav = () => {
       </NavHashLink>
       <NavHashLink
         smooth
-        to="#about"
+        to="#services"
         rel="noopener noreferrer"
         className={`${
-          activeSection === "about"
+          activeSection === "services"
             ? "text-primary scale-110"
             : "text-muted-foreground"
         } hover:text-primary transition-colors duration-300 hover:scale-110`}
       >
-        <IconUserCircle size={35} />
-        <span className="sr-only">Lien vers la section "A propos"</span>
+        <IconBriefcase2 size={35} />
+        <span className="sr-only">Lien vers la section "Services"</span>
       </NavHashLink>
       <NavHashLink
         smooth
@@ -49,8 +50,21 @@ const RightNav = () => {
             : "text-muted-foreground"
         } hover:text-primary transition-colors duration-300 hover:scale-110`}
       >
-        <IconBriefcase2 size={35} />
+        <IconPackage size={35} />
         <span className="sr-only">Lien vers la section "Projets"</span>
+      </NavHashLink>
+      <NavHashLink
+        smooth
+        to="#about"
+        rel="noopener noreferrer"
+        className={`${
+          activeSection === "about"
+            ? "text-primary scale-110"
+            : "text-muted-foreground"
+        } hover:text-primary transition-colors duration-300 hover:scale-110`}
+      >
+        <IconUserCircle size={35} />
+        <span className="sr-only">Lien vers la section "A propos"</span>
       </NavHashLink>
       <NavHashLink
         smooth

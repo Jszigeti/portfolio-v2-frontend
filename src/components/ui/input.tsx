@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import FormikError from "./formikError";
+import FormikError from "./formik-error";
 
 const Input = ({
   formik,

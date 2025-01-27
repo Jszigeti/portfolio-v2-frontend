@@ -1,12 +1,14 @@
-import SectionLayout from "../SectionLayout";
+import SectionTitle from "@/components/ui/section-title";
+import SectionLayout from "../../ui/section-layout";
 import Presentation from "./Presentation";
 
 const About = () => {
   return (
     <SectionLayout sectionId="about">
-      <h2 className="text-3xl md:text-4xl font-bold text-left mb-4 md:mb-8 lg:mb-12 xl:mb-16">
-        À propos de <span className="text-primary">moi</span>
-      </h2>
+      <SectionTitle
+        title="Au service de vos idées"
+        subtitle="À propos de moi"
+      />
       <Presentation />
     </SectionLayout>
   );
