@@ -10,10 +10,10 @@ export default defineConfig({
       registerType: "autoUpdate",
       includeAssets: ["favicon.ico", "apple-touch-icon.png", "mask-icon.svg"],
       manifest: {
-        name: "JS Project Solutions",
+        name: "Portfolio de Jonas Szigeti",
         short_name: "JS Project",
         description:
-          "Portfolio et services de Jonas Szigeti, développeur web freelance.",
+          "Portfolio de Jonas Szigeti, développeur web Full Stack spécialisé en React, NestJS et TypeScript.",
         theme_color: "#ffffff",
         background_color: "#ffffff",
         display: "standalone",
@@ -44,7 +44,7 @@ export default defineConfig({
             purpose: "maskable",
           },
         ],
-        categories: ["business", "portfolio", "productivity"],
+        categories: ["portfolio", "developer", "technology"],
         lang: "fr",
       },
     }),

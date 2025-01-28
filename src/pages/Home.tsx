@@ -8,7 +8,6 @@ import About from "@/components/sections/about/About";
 import Contact from "@/components/sections/contact/Contact";
 import Intro from "@/components/sections/intro/Intro";
 import Projects from "@/components/sections/projects/Projects";
-import Services from "@/components/sections/services/Services";
 
 const Home = () => {
   return (
@@ -18,9 +17,8 @@ const Home = () => {
       <MobileNav />
       <main className="h-[100dvh] w-full snap-y snap-mandatory overflow-y-scroll scroll-smooth">
         <Intro />
-        <Services />
-        <Projects />
         <About />
+        <Projects />
         <Contact />
       </main>
     </>

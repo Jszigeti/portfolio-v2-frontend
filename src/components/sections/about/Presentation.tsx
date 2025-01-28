@@ -8,51 +8,49 @@ export default function Presentation() {
         <Portrait />
         <div className="flex flex-col lg:w-1/2 justify-between gap-2 md:gap-4 xs:text-base text-lg">
           <p>
-            Je m'appelle Jonas,{" "}
+            Développeur web{" "}
+            <span className="text-primary font-semibold">Full Stack</span>, je
+            conçois des{" "}
             <span className="text-primary font-semibold">
-              développeur web freelance
-            </span>{" "}
-            passionné par la création de{" "}
-            <span className="text-primary font-semibold">
-              sites web modernes
+              applications performantes
             </span>{" "}
             et{" "}
             <span className="text-primary font-semibold">
-              applications performantes
+              interfaces modernes
             </span>
-            . Depuis mon adolescence, je me consacre à transformer des idées en{" "}
-            <span className="text-primary font-semibold">
-              solutions numériques innovantes
-            </span>
-            .
+            . Spécialisé en{" "}
+            <span className="text-primary font-semibold">React</span>,{" "}
+            <span className="text-primary font-semibold">NestJS</span> et{" "}
+            <span className="text-primary font-semibold">TypeScript</span>, je
+            développe des solutions <strong>scalables</strong> et{" "}
+            <strong>optimisées pour l’expérience utilisateur</strong>.
           </p>
           <p>
-            Je m’investis aussi dans{" "}
-            <span className="text-primary font-semibold">l’open-source</span>,
-            en développant des outils comme des{" "}
-            <span className="text-primary font-semibold">starter kits</span> ou
-            des <span className="text-primary font-semibold">packages npm</span>{" "}
-            pour simplifier le travail des développeurs et améliorer leur
-            productivité.
-          </p>
-          <p className="hidden md:block">
-            En dehors du développement, je me passionne pour le{" "}
-            <span className="text-primary font-semibold">rétrogaming</span>, les{" "}
-            <span className="text-primary font-semibold">jeux de gestion</span>{" "}
-            et la{" "}
-            <span className="text-primary font-semibold">
-              création de projets créatifs
-            </span>
-            . Ces activités nourrissent ma curiosité et ma créativité au
-            quotidien.
+            Expérience en{" "}
+            <strong>applications SaaS, plateformes collaboratives</strong> et{" "}
+            <strong>microservices</strong>. Passionné par l’open-source, je crée
+            des <span className="text-primary font-semibold">starter kits</span>{" "}
+            et des{" "}
+            <span className="text-primary font-semibold">packages npm</span>{" "}
+            pour améliorer la productivité des développeurs.
           </p>
         </div>
       </div>
-      <CtaButton
-        linkTo={`${import.meta.env.VITE_API_BASE_URL}CV_Jonas_Szigeti.pdf`}
-        content="Découvrez mon parcours"
-        newTab
-      />
+      <div className="hidden md:flex justify-center md:flex-row md:gap-4">
+        <CtaButton
+          linkTo={`${import.meta.env.VITE_API_BASE_URL}CV_Jonas_Szigeti.pdf`}
+          content="Voir mon CV"
+          newTab
+        />
+        <CtaButton linkTo="#contact" content="Me contacter" />
+      </div>
+      <div className="md:hidden">
+        <CtaButton
+          linkTo={`${import.meta.env.VITE_API_BASE_URL}CV_Jonas_Szigeti.pdf`}
+          content="Voir mon CV"
+          newTab
+        />
+      </div>
     </>
   );
 }

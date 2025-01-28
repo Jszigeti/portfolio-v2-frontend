@@ -6,7 +6,6 @@ import {
   IconMail,
   IconBrandGithub,
   IconBrandLinkedin,
-  IconPackage,
 } from "@tabler/icons-react";
 import { NavHashLink } from "react-router-hash-link";
 
@@ -30,16 +29,15 @@ const MobileNav = () => {
       </NavHashLink>
       <NavHashLink
         smooth
-        to="#services"
-        rel="noopener noreferrer"
+        to="#about"
         className={`${
-          activeSection === "services"
+          activeSection === "about"
             ? "text-primary scale-110"
             : "text-muted-foreground"
         } transition-colors duration-300 hover:scale-110`}
       >
-        <IconBriefcase2 size={35} />
-        <span className="sr-only">Lien vers la section "Services"</span>
+        <IconUserCircle size={35} />
+        <span className="sr-only">Lien vers la section "A propos"</span>
       </NavHashLink>
       <NavHashLink
         smooth
@@ -51,20 +49,8 @@ const MobileNav = () => {
             : "text-muted-foreground"
         } transition-colors duration-300 hover:scale-110`}
       >
-        <IconPackage size={35} />
+        <IconBriefcase2 size={35} />
         <span className="sr-only">Lien vers la section "Projets"</span>
-      </NavHashLink>
-      <NavHashLink
-        smooth
-        to="#about"
-        className={`${
-          activeSection === "about"
-            ? "text-primary scale-110"
-            : "text-muted-foreground"
-        } transition-colors duration-300 hover:scale-110`}
-      >
-        <IconUserCircle size={35} />
-        <span className="sr-only">Lien vers la section "A propos"</span>
       </NavHashLink>
       <NavHashLink
         smooth

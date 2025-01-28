@@ -1,9 +1,20 @@
 /* eslint-disable no-irregular-whitespace */
-"use client";
 import { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "@/services/hooks/useOutsideClick";
 import CtaButton from "@/components/ui/cta-button";
+import {
+  SiNestjs,
+  SiReact,
+  SiTypescript,
+  SiDocker,
+  SiMysql,
+  SiMongodb,
+  SiOpenai,
+  SiNatsdotio,
+  SiNpm,
+  SiAxios,
+} from "react-icons/si";
 
 export function ExpandableCardDemo() {
   const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(
@@ -71,13 +82,14 @@ export function ExpandableCardDemo() {
               ref={ref}
               className="w-full max-w-[500px]  h-full md:h-fit md:max-h-[90%]  flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
             >
-              <motion.div layoutId={`image-${active.title}-${id}`}>
+              <motion.div
+                layoutId={`image-${active.title}-${id}`}
+                className="flex justify-center items-center p-4"
+              >
                 <img
-                  width={200}
-                  height={200}
                   src={active.src}
                   alt={active.title}
-                  className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
+                  className="h-64 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
                 />
               </motion.div>
 
@@ -96,6 +108,14 @@ export function ExpandableCardDemo() {
                     >
                       {active.description}
                     </motion.p>
+                    <div className="flex gap-4 mt-2">
+                      {active.icons.map((Icon, index) => (
+                        <Icon
+                          key={index}
+                          className="text-neutral-600 text-3xl"
+                        />
+                      ))}
+                    </div>
                   </div>
 
                   <motion.a
@@ -107,15 +127,22 @@ export function ExpandableCardDemo() {
                     {active.ctaText}
                   </motion.a>
                 </div>
-                <div className="relative px-4 h-full">
+                <div className="relative px-4 h-full overflow-hidden">
                   <motion.div
                     layout
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="text-neutral-600 text-xs md:text-sm lg:text-base pb-8 flex flex-col items-start gap-4 overflow-y-auto h-full md:max-h-60 lg:max-h-80 dark:text-neutral-400 whitespace-pre-line [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
+                    className="text-neutral-600 text-xs md:text-sm lg:text-base pb-8 flex flex-col items-start mt-4 
+    overflow-y-auto max-h-[300px] md:max-h-60 lg:max-h-80 min-h-[100px]
+    dark:text-neutral-400 whitespace-pre-line
+    scrollbar-hide touch-pan-y"
+                    style={{ WebkitOverflowScrolling: "touch" }}
                   >
-                    {active.content}
+                    <p className="font-bold mt-2">Technologies utilisées :</p>
+                    <p>{active.techs}</p>
+                    <p className="font-bold mt-4">Description :</p>
+                    <p>{active.content}</p>
                   </motion.div>
                 </div>
               </div>
@@ -135,11 +162,9 @@ export function ExpandableCardDemo() {
               <div className="flex gap-4 flex-row ">
                 <motion.div layoutId={`image-${card.title}-${id}`}>
                   <img
-                    width={100}
-                    height={100}
                     src={card.src}
                     alt={card.title}
-                    className="h-14 w-14 rounded-lg object-cover object-top"
+                    className="h-full w-14 rounded-lg object-cover object-top"
                   />
                 </motion.div>
                 <div className="">
@@ -216,8 +241,9 @@ const cards = [
     src: "/assets/travel2gether-logo.webp",
     ctaText: "Voir",
     ctaLink: "https://git.alt-tools.tech/gp_groovy_git/travel2gather",
-    content: `
-      Travel2Gether est une plateforme innovante dédiée aux voyageurs solitaires ou en groupe cherchant à collaborer. 
+    techs: "TypeScript, React, NestJS, MySQL, MongoDB, Docker",
+    icons: [SiTypescript, SiReact, SiNestjs, SiMysql, SiMongodb, SiDocker],
+    content: `Travel2Gether est une plateforme innovante dédiée aux voyageurs solitaires ou en groupe cherchant à collaborer. 
       Ses fonctionnalités incluent :
       - Création et gestion de groupes pour planifier des voyages en commun.
       - Partage d'itinéraires et collaboration en temps réel.
@@ -233,8 +259,9 @@ const cards = [
     src: "/assets/chatbot.webp",
     ctaText: "Voir",
     ctaLink: "https://github.com/Jszig/personal-chatbot-widget",
-    content: `
-      Le Personal Chatbot Widget est un outil interactif conçu pour enrichir les portfolios de développeurs. 
+    techs: "TypeScript, React, OpenAI",
+    icons: [SiTypescript, SiReact, SiOpenai],
+    content: `Le Personal Chatbot Widget est un outil interactif conçu pour enrichir les portfolios de développeurs. 
       Il simule une conversation en première personne avec le développeur, offrant des informations sur ses compétences, projets, et expériences, tout en redirigeant les utilisateurs vers un formulaire de contact pour des demandes spécifiques.
   
       Fonctionnalités principales :
@@ -257,6 +284,8 @@ const cards = [
     src: "/assets/nestjs-logo.webp",
     ctaText: "Voir",
     ctaLink: "https://github.com/Jszigeti/ms-mail",
+    techs: "TypeScript, NestJS, Nats",
+    icons: [SiTypescript, SiNestjs, SiNatsdotio],
     content: `
       ms-mail est un microservice conçu pour simplifier et automatiser l'envoi d'emails dans vos applications. 
       Ses principales fonctionnalités incluent :
@@ -273,6 +302,8 @@ const cards = [
     src: "/assets/npm-icon.webp",
     ctaText: "Voir",
     ctaLink: "https://github.com/Jszigeti/axios-cookie-auth",
+    techs: "TypeScript, Axios, NPM",
+    icons: [SiTypescript, SiAxios, SiNpm],
     content: `
       Axios Cookie Auth est un package NPM conçu pour simplifier l'authentification basée sur les cookies. 
       Ce projet propose :

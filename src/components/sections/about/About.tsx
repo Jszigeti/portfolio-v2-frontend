@@ -5,10 +5,7 @@ import Presentation from "./Presentation";
 const About = () => {
   return (
     <SectionLayout sectionId="about">
-      <SectionTitle
-        title="Au service de vos idées"
-        subtitle="À propos de moi"
-      />
+      <SectionTitle title="Développeur passionné" subtitle="À propos de moi" />
       <Presentation />
     </SectionLayout>
   );

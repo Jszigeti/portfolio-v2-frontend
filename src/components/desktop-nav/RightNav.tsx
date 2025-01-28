@@ -4,7 +4,6 @@ import {
   IconUserCircle,
   IconBriefcase2,
   IconMail,
-  IconPackage,
 } from "@tabler/icons-react";
 import { NavHashLink } from "react-router-hash-link";
 
@@ -29,16 +28,16 @@ const RightNav = () => {
       </NavHashLink>
       <NavHashLink
         smooth
-        to="#services"
+        to="#about"
         rel="noopener noreferrer"
         className={`${
-          activeSection === "services"
+          activeSection === "about"
             ? "text-primary scale-110"
             : "text-muted-foreground"
         } hover:text-primary transition-colors duration-300 hover:scale-110`}
       >
-        <IconBriefcase2 size={35} />
-        <span className="sr-only">Lien vers la section "Services"</span>
+        <IconUserCircle size={35} />
+        <span className="sr-only">Lien vers la section "A propos"</span>
       </NavHashLink>
       <NavHashLink
         smooth
@@ -50,21 +49,8 @@ const RightNav = () => {
             : "text-muted-foreground"
         } hover:text-primary transition-colors duration-300 hover:scale-110`}
       >
-        <IconPackage size={35} />
+        <IconBriefcase2 size={35} />
         <span className="sr-only">Lien vers la section "Projets"</span>
-      </NavHashLink>
-      <NavHashLink
-        smooth
-        to="#about"
-        rel="noopener noreferrer"
-        className={`${
-          activeSection === "about"
-            ? "text-primary scale-110"
-            : "text-muted-foreground"
-        } hover:text-primary transition-colors duration-300 hover:scale-110`}
-      >
-        <IconUserCircle size={35} />
-        <span className="sr-only">Lien vers la section "A propos"</span>
       </NavHashLink>
       <NavHashLink
         smooth
