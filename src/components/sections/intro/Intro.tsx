@@ -13,8 +13,6 @@ const Intro = () => {
           secondSubtitle="Transformer des idées en outils performants"
           main
         />
-
-        {/* Version XS (très petits écrans) */}
         <p className="text-base mt-2 sm:hidden">
           <strong>
             Le développement web, c’est créer des outils qui ont un vrai impact.
@@ -24,22 +22,18 @@ const Intro = () => {
           </span>{" "}
           sont au cœur de mon approche.
         </p>
-
-        {/* Version SM+ (tablettes et plus) */}
         <p className="xs:hidden text-lg mt-2">
           <strong>
             Le développement web est plus qu’une compétence, c’est un levier
             pour innover, optimiser et résoudre des problématiques réelles.
           </strong>{" "}
-          Mon approche :
+          Mon approche :{" "}
           <span className="text-primary font-semibold">
             concevoir des solutions digitales qui allient clarté, performance et
             impact
           </span>
           , en mettant toujours l’expérience utilisateur au centre.
         </p>
-
-        {/* Version XS (très petits écrans) */}
         <p className="text-base mt-1 sm:hidden">
           Chaque ligne de code{" "}
           <span className="text-primary font-semibold">
@@ -47,8 +41,6 @@ const Intro = () => {
           </span>{" "}
           Un bon produit, c’est un produit utile et efficace.
         </p>
-
-        {/* Version SM+ (tablettes et plus) */}
         <p className="xs:hidden text-lg mt-1">
           Chaque ligne de code a un objectif :{" "}
           <span className="text-primary font-semibold">
@@ -58,7 +50,6 @@ const Intro = () => {
           Un bon produit ne se mesure pas à sa complexité technique, mais à{" "}
           <strong>son utilité et son efficacité sur le long terme</strong>.
         </p>
-
         <p className="xs:hidden text-lg mt-1">
           Passionné par la{" "}
           <span className="text-primary font-semibold">scalabilité</span>, la{" "}
@@ -70,7 +61,6 @@ const Intro = () => {
           , je transforme chaque projet en{" "}
           <strong>une solution durable et performante</strong>.
         </p>
-
         <CtaButton linkTo="#about" content="Ma méthodologie 💡" />
       </SectionLayout>
     </AuroraBackground>

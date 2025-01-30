@@ -13,7 +13,7 @@ export default function Presentation() {
     <>
       <div className="flex flex-col gap-2 md:gap-4 lg:flex-row lg:justify-around md:items-center">
         <Portrait />
-        <div className="flex flex-col lg:w-1/2 justify-between gap-2 md:gap-4 text-base md:text-lg">
+        <div className="flex flex-col lg:w-1/2 justify-between gap-2 text-base md:text-lg">
           <p className="sm:hidden">
             <span className="text-primary font-semibold">
               Développer, c'est avant tout répondre à un besoin réel.
@@ -22,7 +22,6 @@ export default function Presentation() {
             chaque détail pour un produit{" "}
             <strong>performant et évolutif</strong>.
           </p>
-
           <p className="hidden sm:block">
             Développer, ce n’est pas juste coder, c’est{" "}
             <span className="text-primary font-semibold">
@@ -30,7 +29,6 @@ export default function Presentation() {
             </span>{" "}
             aux utilisateurs. Mon approche repose sur :
           </p>
-
           <ul className="list-disc pl-5 hidden sm:block">
             <li>
               <strong>Comprendre avant de coder</strong> – L’analyse des besoins
@@ -45,7 +43,6 @@ export default function Presentation() {
               comme standards.
             </li>
           </ul>
-
           <p>
             J’utilise{" "}
             <span className="text-primary font-semibold">
@@ -65,9 +62,7 @@ export default function Presentation() {
             </span>
             .
           </p>
-
-          {/* Icônes des technos en ligne compacte */}
-          <div className="flex gap-4 justify-center lg:justify-start mt-2">
+          <div className="flex gap-4 justify-center lg:justify-start">
             <IconBrandTypescript size={40} className="text-primary" />
             <IconBrandReact size={40} className="text-primary" />
             <IconBrandNextjs size={40} className="text-primary" />
@@ -76,7 +71,6 @@ export default function Presentation() {
           </div>
         </div>
       </div>
-
       <div className="hidden sm:flex sm:flex-col sm:gap-4 md:flex-row justify-center">
         <CtaButton
           linkTo={`${import.meta.env.VITE_API_BASE_URL}CV_Jonas_Szigeti.pdf`}
@@ -85,7 +79,6 @@ export default function Presentation() {
         />
         <CtaButton linkTo="#projects" content="Voir mes projets 🚀" />
       </div>
-
       <div className="sm:hidden">
         <CtaButton
           linkTo={`${import.meta.env.VITE_API_BASE_URL}CV_Jonas_Szigeti.pdf`}
