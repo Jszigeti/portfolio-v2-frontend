@@ -1,53 +1,95 @@
 import Portrait from "./Portrait";
 import CtaButton from "@/components/ui/cta-button";
+import {
+  IconBrandDocker,
+  IconBrandNextjs,
+  IconBrandReact,
+  IconBrandTypescript,
+} from "@tabler/icons-react";
+import NestJSIcon from "@/components/ui/nestjs-icon";
 
 export default function Presentation() {
   return (
     <>
       <div className="flex flex-col gap-2 md:gap-4 lg:flex-row lg:justify-around md:items-center">
         <Portrait />
-        <div className="flex flex-col lg:w-1/2 justify-between gap-2 md:gap-4 xs:text-base text-lg">
-          <p>
-            Développeur web{" "}
-            <span className="text-primary font-semibold">Full Stack</span>, je
-            conçois des{" "}
+        <div className="flex flex-col lg:w-1/2 justify-between gap-2 md:gap-4 text-base md:text-lg">
+          <p className="sm:hidden">
             <span className="text-primary font-semibold">
-              applications performantes
+              Développer, c'est avant tout répondre à un besoin réel.
             </span>{" "}
-            et{" "}
+            J’analyse les besoins, conçois une architecture propre et optimise
+            chaque détail pour un produit{" "}
+            <strong>performant et évolutif</strong>.
+          </p>
+
+          <p className="hidden sm:block">
+            Développer, ce n’est pas juste coder, c’est{" "}
             <span className="text-primary font-semibold">
-              interfaces modernes
-            </span>
-            . Spécialisé en{" "}
-            <span className="text-primary font-semibold">React</span>,{" "}
-            <span className="text-primary font-semibold">NestJS</span> et{" "}
-            <span className="text-primary font-semibold">TypeScript</span>, je
-            développe des solutions <strong>scalables</strong> et{" "}
-            <strong>optimisées pour l’expérience utilisateur</strong>.
+              concevoir des solutions adaptées
+            </span>{" "}
+            aux utilisateurs. Mon approche repose sur :
           </p>
+
+          <ul className="list-disc pl-5 hidden sm:block">
+            <li>
+              <strong>Comprendre avant de coder</strong> – L’analyse des besoins
+              guide la solution.
+            </li>
+            <li>
+              <strong>Construire avec précision</strong> – Une architecture
+              propre, scalable et maintenable.
+            </li>
+            <li>
+              <strong>Optimiser en continu</strong> – Performance et sécurité
+              comme standards.
+            </li>
+          </ul>
+
           <p>
-            Expérience en{" "}
-            <strong>applications SaaS, plateformes collaboratives</strong> et{" "}
-            <strong>microservices</strong>. Passionné par l’open-source, je crée
-            des <span className="text-primary font-semibold">starter kits</span>{" "}
+            J’utilise{" "}
+            <span className="text-primary font-semibold">
+              React, NestJS, TypeScript
+            </span>{" "}
+            pour concevoir des{" "}
+            <span className="text-primary font-semibold">
+              interfaces intuitives
+            </span>{" "}
             et des{" "}
-            <span className="text-primary font-semibold">packages npm</span>{" "}
-            pour améliorer la productivité des développeurs.
+            <span className="text-primary font-semibold">
+              applications robustes
+            </span>
+            , pensées pour{" "}
+            <span className="text-primary font-semibold">
+              la fluidité et l'efficacité
+            </span>
+            .
           </p>
+
+          {/* Icônes des technos en ligne compacte */}
+          <div className="flex gap-4 justify-center lg:justify-start mt-2">
+            <IconBrandTypescript size={40} className="text-primary" />
+            <IconBrandReact size={40} className="text-primary" />
+            <IconBrandNextjs size={40} className="text-primary" />
+            <NestJSIcon className="w-[40px] h-[40px]" color="fill-primary" />
+            <IconBrandDocker size={40} className="text-primary" />
+          </div>
         </div>
       </div>
-      <div className="hidden md:flex justify-center md:flex-row md:gap-4">
+
+      <div className="hidden sm:flex sm:flex-col sm:gap-4 md:flex-row justify-center">
         <CtaButton
           linkTo={`${import.meta.env.VITE_API_BASE_URL}CV_Jonas_Szigeti.pdf`}
-          content="Voir mon CV"
+          content="Voir mon CV 📄"
           newTab
         />
-        <CtaButton linkTo="#contact" content="Me contacter" />
+        <CtaButton linkTo="#projects" content="Voir mes projets 🚀" />
       </div>
-      <div className="md:hidden">
+
+      <div className="sm:hidden">
         <CtaButton
           linkTo={`${import.meta.env.VITE_API_BASE_URL}CV_Jonas_Szigeti.pdf`}
-          content="Voir mon CV"
+          content="Voir mon CV 📄"
           newTab
         />
       </div>

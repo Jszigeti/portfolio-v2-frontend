@@ -2,13 +2,6 @@ import SectionTitle from "@/components/ui/section-title";
 import SectionLayout from "../../ui/section-layout";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import CtaButton from "@/components/ui/cta-button";
-import {
-  IconBrandDocker,
-  IconBrandNextjs,
-  IconBrandReact,
-  IconBrandTypescript,
-} from "@tabler/icons-react";
-import NestJSIcon from "@/components/ui/nestjs-icon";
 
 const Intro = () => {
   return (
@@ -16,43 +9,69 @@ const Intro = () => {
       <SectionLayout sectionId="home">
         <SectionTitle
           title="Jonas Szigeti"
-          subtitle="Développeur Web Full Stack"
-          secondSubtitle="Concevoir, optimiser et innover"
+          subtitle="Créer du sens à travers le code 🚀"
+          secondSubtitle="Transformer des idées en outils performants"
           main
         />
-        <p className="xs:text-base text-lg mt-2 md:mt-4">
-          Développeur web spécialisé en{" "}
-          <span className="text-primary font-semibold">React</span>,{" "}
-          <span className="text-primary font-semibold">NestJS</span> et{" "}
-          <span className="text-primary font-semibold">TypeScript</span>, je
-          conçois des{" "}
+
+        {/* Version XS (très petits écrans) */}
+        <p className="text-base mt-2 sm:hidden">
+          <strong>
+            Le développement web, c’est créer des outils qui ont un vrai impact.
+          </strong>{" "}
           <span className="text-primary font-semibold">
-            applications modernes
+            Simplicité, performance et expérience utilisateur
           </span>{" "}
-          et des{" "}
-          <span className="text-primary font-semibold">sites performants</span>.
-          Mon approche repose sur la <strong>scalabilité</strong>, la{" "}
-          <strong>maintenabilité</strong> et une{" "}
-          <strong>expérience utilisateur fluide</strong>.
+          sont au cœur de mon approche.
         </p>
-        <p className="xs:text-base text-lg mt-1 md:mt-2 hidden md:block">
-          Fort d’une expertise en{" "}
+
+        {/* Version SM+ (tablettes et plus) */}
+        <p className="xs:hidden text-lg mt-2">
+          <strong>
+            Le développement web est plus qu’une compétence, c’est un levier
+            pour innover, optimiser et résoudre des problématiques réelles.
+          </strong>{" "}
+          Mon approche :
           <span className="text-primary font-semibold">
-            développement full stack
+            concevoir des solutions digitales qui allient clarté, performance et
+            impact
           </span>
-          , j'accompagne les entreprises dans la <strong>création</strong> et l’
-          <strong>optimisation</strong> de leurs outils numériques, en
-          garantissant <strong>qualité</strong>, <strong>performance</strong> et{" "}
-          <strong>sécurité</strong>.
+          , en mettant toujours l’expérience utilisateur au centre.
         </p>
-        <div className="flex gap-4 md:gap-8 justify-around md:justify-center items-center">
-          <IconBrandTypescript size={40} className="text-primary" />
-          <IconBrandReact size={40} className="text-primary" />
-          <IconBrandNextjs size={40} className="text-primary" />
-          <NestJSIcon className="w-[40px] h-[40px]" color="fill-primary" />
-          <IconBrandDocker size={40} className="text-primary" />
-        </div>
-        <CtaButton linkTo="#about" content="Découvrir mon parcours" />
+
+        {/* Version XS (très petits écrans) */}
+        <p className="text-base mt-1 sm:hidden">
+          Chaque ligne de code{" "}
+          <span className="text-primary font-semibold">
+            simplifie, optimise ou fluidifie.
+          </span>{" "}
+          Un bon produit, c’est un produit utile et efficace.
+        </p>
+
+        {/* Version SM+ (tablettes et plus) */}
+        <p className="xs:hidden text-lg mt-1">
+          Chaque ligne de code a un objectif :{" "}
+          <span className="text-primary font-semibold">
+            simplifier un processus, fluidifier un parcours ou améliorer la
+            productivité.
+          </span>{" "}
+          Un bon produit ne se mesure pas à sa complexité technique, mais à{" "}
+          <strong>son utilité et son efficacité sur le long terme</strong>.
+        </p>
+
+        <p className="xs:hidden text-lg mt-1">
+          Passionné par la{" "}
+          <span className="text-primary font-semibold">scalabilité</span>, la{" "}
+          <span className="text-primary font-semibold">maintenabilité</span> et
+          l’
+          <span className="text-primary font-semibold">
+            expérience utilisateur
+          </span>
+          , je transforme chaque projet en{" "}
+          <strong>une solution durable et performante</strong>.
+        </p>
+
+        <CtaButton linkTo="#about" content="Ma méthodologie 💡" />
       </SectionLayout>
     </AuroraBackground>
   );

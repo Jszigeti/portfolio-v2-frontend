@@ -5,10 +5,10 @@ import SectionTitle from "@/components/ui/section-title";
 const Contact = () => {
   return (
     <SectionLayout sectionId="contact">
-      <SectionTitle title="Discutons recrutement" subtitle="Contactez-moi" />
+      <SectionTitle title="Échangeons ensemble" subtitle="Contactez-moi 🚀" />
       <p className="xs:text-base text-lg">
-        Vous recherchez un développeur web compétent et passionné ? Je suis à
-        l’écoute de nouvelles opportunités !
+        Besoin d’un développeur web engagé et efficace ? Je suis toujours ouvert
+        aux échanges autour de nouvelles opportunités et collaborations !
       </p>
       <ContactForm />
     </SectionLayout>

@@ -55,7 +55,7 @@ export default function ContactForm() {
           type="submit"
           className="lg:mx-auto lg:w-1/2 text-xl hover:scale-105 transition-transform duration-300"
         >
-          Envoyer
+          Envoyer ✉️
         </Button>
       </form>
     </>

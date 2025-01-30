@@ -6,7 +6,8 @@ export const content = ["./index.html", "./src/**/*.{ts,tsx,js,jsx}"];
 export const theme = {
   extend: {
     screens: {
-      xs: { max: "499px" },
+      xs: { max: "449px" },
+      sm: { min: "450px" },
     },
     borderRadius: {
       lg: "var(--radius)",

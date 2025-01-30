@@ -194,7 +194,7 @@ export function ExpandableCardDemo() {
       </ul>
       <CtaButton
         linkTo="https://github.com/Jszigeti?tab=repositories"
-        content="Voir plus"
+        content="Voir plus sur GitHub 🚀"
         newTab
       />
     </>
