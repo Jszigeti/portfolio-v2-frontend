@@ -9,7 +9,7 @@ export default function ContactForm() {
     <>
       <form
         onSubmit={formik.handleSubmit}
-        className="mx-auto flex flex-col xs:gap-3 gap-6 w-full lg:w-4/5"
+        className="mx-auto flex flex-col xs:gap-3 gap-6 w-full"
       >
         <div className="flex gap-4 items-center w-full">
           <div className="relative w-1/2">
